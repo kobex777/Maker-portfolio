@@ -8,6 +8,8 @@ import { GalaxyBackground } from './components/GalaxyBackground';
 import { Certifications } from './components/Certifications';
 import { CallToAction } from './components/CallToAction';
 
+import { Analytics } from '@vercel/analytics/react';
+
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -37,6 +39,7 @@ function App() {
 
   return (
     <div className="w-full min-h-screen font-sans" ref={containerRef}>
+      <Analytics />
 
       <GalaxyBackground />
 
